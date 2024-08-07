@@ -31,7 +31,8 @@ const getWeather = async () => {
               }
         });  
     
-        const weatherData = await weatherDataFetch.json();       
+        const weatherData = await weatherDataFetch.json();
+        document.querySelector("#valid").style.display = "block";   
         city.textContent = `${weatherData.name}`;
         description.textContent = `${weatherData.weather[0].main}`
         tempImg.innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png"/>`;
@@ -40,6 +41,7 @@ const getWeather = async () => {
         tempMin.textContent = `${weatherData.main.temp_min}°C`;
     }
     catch(error) {
-        console.log(error)
+        city.textContent = "Invalid city"
+        document.querySelector("#valid").style.display = "none";
     }
 }
