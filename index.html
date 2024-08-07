@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raveendra Mannam">
+    <meta name="description" content="Weather API">
+    <script src="https://kit.fontawesome.com/9db3704a70.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Weather Application</title>
+</head>
+<body>
+    <main class="app">
+
+        <!-- Search Bar -->
+        <section id="search-bar">
+            <input autocomplete="false" id="search-bar-input" type="text" placeholder="Search by City">
+            <button id="search-icon" onclick="getWeather()"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </section>
+
+       <!-- Date and City -->
+        <section id="info">
+            <p id="date"></p>
+            <h4 id="city"></h4>
+        </section>
+
+        <!-- Weather image -->
+        <section id="tempImg"></section>
+
+        <!-- Icon  -->
+        <section id="temp-img"></section>
+
+        <!-- Description of weather -->
+        <p id="description"></p>
+
+        <!-- Temperture -->
+        <section id="temp"></section>
+
+        <!-- Info at the bottom -->
+        <article class="extra-info">
+            <section class="col">
+                <section class="info">
+                    <h5>Highs</h5>
+                    <p id="temp-max"></p>
+                </section>
+            </section>            
+            <section class="col">
+                <section class="info">
+                    <h5>Lows</h5>
+                    <p id="temp-min"></p>
+                </section>
+            </section>
+        </article>
+
+    </main>
+</body>
+    <script src="main.js"></script>
+</html>
